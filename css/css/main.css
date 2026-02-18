@@ -1,0 +1,110 @@
+/* --- 1. GLOBAL RESET & SAMSUNG GRADIENT --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    /* THE FIX: Deep Blue Gradient Fixed Background */
+    background: linear-gradient(135deg, #000000 0%, #06083d 40%, #0036cc 100%) fixed;
+    color: #333;
+    display: flex; /* Sidebar Layout */
+    min-height: 100vh;
+}
+
+/* --- 2. THE BLACK SIDEBAR (Fixed Left) --- */
+#sidebar {
+    width: 280px;
+    background: rgba(0, 0, 0, 0.9); /* 90% Black */
+    backdrop-filter: blur(10px);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    position: fixed;
+    height: 100vh;
+    border-right: 1px solid #333;
+    z-index: 100;
+}
+
+/* Sidebar Profile */
+.profile-header { text-align: center; margin-bottom: 40px; }
+.profile-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 4px solid #00aaff; /* Samsung Cyan */
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0 0 20px rgba(0, 170, 255, 0.4);
+}
+.profile-name { font-size: 20px; font-weight: 800; letter-spacing: 1px; margin-bottom: 5px; color: #fff; }
+.profile-role { font-size: 11px; color: #00aaff; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; }
+
+/* Navigation Links */
+nav ul { list-style: none; }
+nav li { margin-bottom: 10px; }
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-weight: 600;
+}
+nav a:hover { background: rgba(255,255,255,0.1); color: #fff; padding-left: 25px; }
+nav a.active { background: #00aaff; color: #fff; box-shadow: 0 5px 15px rgba(0, 170, 255, 0.3); }
+
+/* --- 3. MAIN CONTENT AREA (Transparent!) --- */
+#main-content {
+    margin-left: 280px; /* Space for sidebar */
+    padding: 60px;
+    width: 100%;
+    /* THE FIX: No background color here so the body gradient shows! */
+}
+
+/* --- 4. GLASS CARDS (Containers for text) --- */
+.glass-card {
+    background: rgba(255, 255, 255, 0.95); /* White glass */
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5); /* Deep shadow */
+    margin-bottom: 30px;
+}
+
+.dark-card {
+    background: rgba(0, 0, 0, 0.6); /* Dark glass */
+    padding: 40px;
+    border-radius: 20px;
+    color: #fff;
+    border: 1px solid #333;
+    margin-bottom: 30px;
+}
+
+/* Typography */
+h1 { font-size: 42px; font-weight: 900; margin-bottom: 10px; color: #000; }
+h2 { font-size: 24px; font-weight: 800; margin-bottom: 15px; color: #06083d; }
+.sub-header { color: #00aaff; font-weight: bold; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; }
+
+/* --- 5. RESUME BUTTON --- */
+.resume-download-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s;
+    border-left: 5px solid #00aaff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.resume-download-btn:hover { transform: scale(1.02); box-shadow: 0 0 30px rgba(0, 170, 255, 0.6); }
+
+/* --- 6. GRIDS --- */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.info-box { background: #f4f7f9; padding: 25px; border-radius: 12px; border-top: 3px solid #00aaff; }
+.work-item { background: #fff; padding: 30px; border-radius: 15px; transition: 0.3s; border: 1px solid #eee; }
+.work-item:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-color: #00aaff; }
+.tag { background: #000; color: #fff; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 4px; text-transform: uppercase; }

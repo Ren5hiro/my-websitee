@@ -1,0 +1,165 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Experience | Rafael Papas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <style>
+    /* 1. RESET & FOUNDATION */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        /* Samsung Blue Gradient Fixed Background */
+        background: linear-gradient(135deg, #000000 0%, #06083d 40%, #0036cc 100%) fixed;
+        display: flex; 
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    /* 2. SIDEBAR NAVIGATION */
+    #sidebar {
+        width: 280px;
+        background: #000;
+        color: #fff;
+        padding: 50px 20px;
+        position: fixed;
+        height: 100vh;
+        border-right: 3px solid #00aaff;
+        z-index: 100;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 3px solid #00aaff;
+        display: block;
+        margin: 0 auto 20px;
+        object-fit: cover;
+    }
+
+    nav ul { list-style: none; margin-top: 30px; }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 13px;
+        display: block;
+        padding: 12px 15px;
+        transition: 0.3s;
+    }
+    nav a:hover { color: #00aaff; }
+    nav a.active { background: #00aaff; border-radius: 5px; font-weight: bold; }
+
+    /* 3. MAIN CONTENT (Transparent) */
+    #main-content {
+        margin-left: 280px;
+        padding: 60px;
+        width: 100%;
+        background: transparent;
+    }
+
+    /* 4. THE GLASS CARD */
+    .glass-card {
+        background: rgba(255, 255, 255, 0.98);
+        color: #000;
+        padding: 50px;
+        border-radius: 25px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+
+    .section-title {
+        font-size: 32px;
+        font-weight: 800;
+        border-left: 6px solid #00aaff;
+        padding-left: 15px;
+        margin-bottom: 35px;
+        text-transform: uppercase;
+    }
+
+    /* 5. CLICKABLE RESUME AREA */
+    .pdf-click-box {
+        border: 2px dashed #00aaff;
+        background: #f0f8ff;
+        padding: 35px;
+        text-align: center;
+        border-radius: 15px;
+        margin-bottom: 40px;
+        cursor: pointer;
+        transition: 0.3s;
+        text-decoration: none;
+        display: block;
+    }
+    .pdf-click-box:hover { background: #e0f0ff; transform: translateY(-3px); }
+    .pdf-icon { width: 50px; margin-bottom: 15px; opacity: 0.8; }
+    .download-text { font-size: 18px; font-weight: 800; color: #000; display: block; }
+    .btn-action { background: #00aaff; color: #fff; padding: 10px 25px; border-radius: 50px; font-weight: bold; display: inline-block; margin-top: 15px; }
+
+    /* 6. EXPERIENCE LIST */
+    .exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+    .exp-item { background: #f9f9f9; padding: 25px; border-radius: 12px; border-left: 4px solid #00aaff; }
+    .exp-label { color: #00aaff; font-size: 10px; font-weight: 800; text-transform: uppercase; margin-bottom: 8px; display: block; }
+    .exp-item h3 { font-size: 16px; margin-bottom: 5px; }
+    .exp-item p { font-size: 13px; color: #666; line-height: 1.5; }
+  </style>
+</head>
+<body>
+
+  <aside id="sidebar">
+    <img src="img/profile.jpg" alt="Rafael Papas" class="profile-img">
+    <div style="text-align: center;">
+        <h2 style="font-size: 18px; letter-spacing: 1px;">RAFAEL PAPAS</h2>
+        <p style="color: #00aaff; font-size: 10px; font-weight: 800; margin-top: 5px;">SAMSUNG AMBASSADOR</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="works.html">Works</a></li>
+        <li><a href="resume.html" class="active">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="contact.html">References & Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main id="main-content">
+    <div class="glass-card">
+        <h1 class="section-title">Experience & CV</h1>
+
+        <a href="img/RafaelPapas-Resume.pdf" target="_blank" class="pdf-click-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" class="pdf-icon" alt="PDF Icon">
+            <span class="download-text">View Full Curriculum Vitae</span>
+            <p style="color: #666; font-size: 13px; margin-top: 5px;">4th Year Computer Engineering | Samsung Student Ambassador</p>
+            <div class="btn-action">OPEN PDF RESUME</div>
+        </a>
+
+        <div class="exp-grid">
+            <div class="exp-item">
+                <span class="exp-label">Samsung Philippines</span>
+                <h3>Samsung Galaxy Ambassador</h3>
+                <p>Leading monthly tech missions and producing digital content focusing on the Galaxy ecosystem and AI integration.</p>
+            </div>
+            <div class="exp-item">
+                <span class="exp-label">University of Santo Tomas</span>
+                <h3>Lead Researcher</h3>
+                <p>Headed the award-winning study on prenatal experiences in Metro Manila during the COVID-19 pandemic.</p>
+            </div>
+            <div class="exp-item">
+                <span class="exp-label">Casa Frio Resort</span>
+                <h3>Social Media Manager</h3>
+                <p>Managed brand identity, visual aesthetics, and online customer engagement strategies.</p>
+            </div>
+            <div class="exp-item">
+                <span class="exp-label">UST Drama Guild</span>
+                <h3>Documentation Officer</h3>
+                <p>Managed production documentation and logistics for annual theatrical showcases.</p>
+            </div>
+        </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

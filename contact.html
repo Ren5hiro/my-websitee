@@ -1,0 +1,162 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Contact | Rafael Papas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <style>
+    /* 1. THE FOUNDATION - FORCES THE GRADIENT */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        background: linear-gradient(135deg, #000000 0%, #06083d 40%, #0036cc 100%) fixed;
+        display: flex; 
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    /* 2. SIDEBAR NAVIGATION */
+    #sidebar {
+        width: 280px;
+        background: #000;
+        color: #fff;
+        padding: 50px 20px;
+        position: fixed;
+        height: 100vh;
+        border-right: 3px solid #00aaff;
+        z-index: 100;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 3px solid #00aaff;
+        display: block;
+        margin: 0 auto 20px;
+        object-fit: cover;
+    }
+
+    nav ul { list-style: none; margin-top: 30px; }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 13px;
+        display: block;
+        padding: 12px 15px;
+        transition: 0.3s;
+    }
+    nav a:hover { color: #00aaff; }
+    nav a.active { background: #00aaff; border-radius: 5px; font-weight: bold; }
+
+    /* 3. MAIN CONTENT (Transparent) */
+    #main-content {
+        margin-left: 280px;
+        padding: 60px;
+        width: 100%;
+        background: transparent;
+    }
+
+    /* 4. THE GLASS CARD */
+    .glass-card {
+        background: rgba(255, 255, 255, 0.98);
+        color: #000;
+        padding: 50px;
+        border-radius: 25px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+
+    .section-title {
+        font-size: 32px;
+        font-weight: 800;
+        border-left: 6px solid #00aaff;
+        padding-left: 15px;
+        margin-bottom: 35px;
+        text-transform: uppercase;
+    }
+
+    /* 5. CONTACT LAYOUT */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    .contact-box { background: #f9f9f9; padding: 30px; border-radius: 15px; border-top: 4px solid #00aaff; }
+    .contact-box h3 { font-size: 18px; margin-bottom: 15px; color: #0036cc; }
+    
+    .social-link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #333;
+        margin-bottom: 15px;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+    .social-link:hover { color: #00aaff; transform: translateX(5px); }
+    .social-link img { width: 24px; margin-right: 12px; }
+
+    /* 6. REFERENCES LIST */
+    .ref-list { list-style: none; }
+    .ref-item { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
+    .ref-item:last-child { border-bottom: none; }
+    .ref-name { font-weight: 800; display: block; }
+    .ref-title { font-size: 13px; color: #666; }
+  </style>
+</head>
+<body>
+
+  <aside id="sidebar">
+    <img src="img/profile.jpg" alt="Rafael Papas" class="profile-img">
+    <div style="text-align: center;">
+        <h2 style="font-size: 18px; letter-spacing: 1px;">RAFAEL PAPAS</h2>
+        <p style="color: #00aaff; font-size: 10px; font-weight: 800; margin-top: 5px;">SAMSUNG AMBASSADOR</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="works.html">Works</a></li>
+        <li><a href="resume.html">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="contact.html" class="active">References & Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main id="main-content">
+    <div class="glass-card">
+        <h1 class="section-title">Get in Touch</h1>
+
+        <div class="contact-grid">
+            <div class="contact-box">
+                <h3>Character References</h3>
+                <div class="ref-list">
+                    <div class="ref-item">
+                        <span class="ref-name">References available upon request</span>
+                        <span class="ref-title">Academic and professional contacts from DLSU and Samsung.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-box">
+                <h3>Connect with Me</h3>
+                <a href="https://www.facebook.com/papas.rafael/" target="_blank" class="social-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="FB"> Facebook
+                </a>
+                <a href="mailto:rafael_papas@dlsu.edu.ph" class="social-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"> School Email
+                </a>
+                <a href="https://drive.google.com/drive/folders/1PdkSKU07Cjb-N8rzpXdr28CvmFey2ExU?usp=drive_link" target="_blank" class="social-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/281/281752.png" alt="Drive"> Research Portfolio
+                </a>
+            </div>
+        </div>
+        
+        <div style="margin-top: 40px; text-align: center; color: #888; font-size: 12px;">
+            <p>Designed as part of Laboratory Activity 4 | HTML5 Boilerplate Migration</p>
+            <p>© 2026 Rafael Papas. All Rights Reserved.</p>
+        </div>
+    </div>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>About Rafael Papas | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <style>
+    /* RESET & BASE STYLES */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        background: linear-gradient(135deg, #000000 0%, #06083d 40%, #0036cc 100%) fixed;
+        display: flex; 
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    /* SIDEBAR NAVIGATION */
+    #sidebar {
+        width: 280px;
+        background: #000;
+        color: #fff;
+        padding: 50px 20px;
+        position: fixed;
+        height: 100vh;
+        border-right: 3px solid #00aaff;
+        z-index: 100;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 3px solid #00aaff;
+        display: block;
+        margin: 0 auto 20px;
+        object-fit: cover;
+    }
+
+    nav ul { list-style: none; margin-top: 30px; }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 13px;
+        display: block;
+        padding: 12px 15px;
+        transition: 0.3s;
+    }
+    nav a:hover { color: #00aaff; }
+    nav a.active { background: #00aaff; border-radius: 5px; font-weight: bold; }
+
+    /* MAIN CONTENT */
+    #main-content {
+        margin-left: 280px;
+        padding: 60px;
+        width: 100%;
+        background: transparent;
+    }
+
+    /* THE GLASS CARD */
+    .glass-card {
+        background: rgba(255, 255, 255, 0.98);
+        color: #000;
+        padding: 60px;
+        border-radius: 25px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        max-width: 1000px;
+    }
+
+    .sub-label { color: #00aaff; font-weight: 800; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; }
+    h1 { font-size: 48px; font-weight: 900; margin-bottom: 25px; letter-spacing: -1px; }
+    .bio-text { font-size: 15px; color: #444; line-height: 1.6; margin-bottom: 25px; }
+
+    /* MULTILINGUAL TAG */
+    .jp-tag {
+        background: #000;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 12px;
+        display: inline-block;
+        margin-bottom: 40px;
+    }
+
+    /* INFO GRID */
+    .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+    .info-box {
+        background: #f8f9fa;
+        padding: 25px;
+        border-radius: 12px;
+        border-bottom: 4px solid #00aaff;
+    }
+    .info-box h4 { color: #00aaff; font-size: 11px; font-weight: 800; text-transform: uppercase; margin-bottom: 10px; }
+    .info-box p { font-size: 13px; color: #555; }
+
+    /* FOOTER CARD */
+    .black-footer {
+        background: #000;
+        color: #fff;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+    }
+    .black-footer h3 { color: #00aaff; font-size: 16px; letter-spacing: 2px; margin-bottom: 10px; }
+    .black-footer p { font-size: 13px; opacity: 0.8; }
+  </style>
+</head>
+<body>
+
+  <aside id="sidebar">
+    <img src="img/profile.jpg" alt="Rafael Papas" class="profile-img">
+    <div style="text-align: center;">
+        <h2 style="font-size: 18px; letter-spacing: 1px;">RAFAEL PAPAS</h2>
+        <p style="color: #00aaff; font-size: 10px; font-weight: 800; margin-top: 5px;">SAMSUNG AMBASSADOR</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Me</a></li>
+        <li><a href="works.html">Works</a></li>
+        <li><a href="resume.html">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="contact.html">References & Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main id="main-content">
+    <div class="glass-card">
+        <p class="sub-label">Candidate for Graduation | DLSU Manila</p>
+        <h1>About Rafael Papas</h1>
+        
+        <p class="bio-text">
+            I am a <b>4th-year Computer Engineering student</b> at <b>De La Salle University</b>. My perspective is shaped by a unique international upbringing and a drive for technical mastery.
+        </p>
+
+        <div class="jp-tag">
+            JP Multilingual: Fluent in English, Tagalog, and <b>Japanese (日本語)</b>
+        </div>
+
+        <div class="info-grid">
+            <div class="info-box">
+                <h4>Global Education</h4>
+                <p>Completed elementary years in Japan, fostering deep cultural fluency and academic discipline.</p>
+            </div>
+            <div class="info-box">
+                <h4>Tech Leadership</h4>
+                <p>Current Samsung Student Ambassador producing high-quality content and executing monthly tech missions.</p>
+            </div>
+            <div class="info-box">
+                <h4>Discipline</h4>
+                <p>University of Santo Tomas Senior High School honors graduate with a strong foundation in Health Allied research.</p>
+            </div>
+            <div class="info-box">
+                <h4>Professional Goal</h4>
+                <p>Member of ACCESS organization, dedicated to advancing the field of Computer Engineering through hardware-software integration.</p>
+            </div>
+        </div>
+
+        <div class="black-footer">
+            <h3>ENGINEERING THE FLIGHT PATH</h3>
+            <p>Utilizing my technical background in <b>Computer Engineering</b> to pursue my career as a <b>Commercial Pilot</b>, combining system expertise with a passion for aviation.</p>
+        </div>
+    </div>
+  </main>
+
+</body>
+</html>
