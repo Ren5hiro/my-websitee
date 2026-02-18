@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 3.1: Get Element Position</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #f4f4f4; }
+        
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: #00aaff; /* Samsung Blue */
+            color: white;
+            display: flex; justify-content: center; align-items: center;
+            font-weight: bold;
+            
+            /* Move it somewhere random */
+            position: absolute;
+            top: 150px;
+            left: 300px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        #output {
+            margin-top: 250px;
+            padding: 20px;
+            background: white;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Exercise 3.1: Get Position</h2>
+    <p>Click the button to find the blue box's coordinates.</p>
+    <button onclick="getPosition()">Get Box Position</button>
+
+    <div id="box">I am here</div>
+
+    <div id="output">
+        <strong>Coordinates:</strong> <span id="coords">Unknown</span>
+    </div>
+
+    <script>
+        function getPosition() {
+            // 1. Get the element
+            let box = document.getElementById("box");
+            
+            // 2. Get the position object
+            let position = box.getBoundingClientRect();
+            
+            // 3. Log to Console (Required by instructions)
+            console.log("Left:", position.left, "Top:", position.top);
+            
+            // 4. Show on screen
+            document.getElementById("coords").innerHTML = 
+                `X: ${Math.round(position.left)}px, Y: ${Math.round(position.top)}px`;
+        }
+    </script>
+</body>
+</html>

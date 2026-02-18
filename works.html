@@ -6,19 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <style>
-    /* 1. THE FOUNDATION - FORCES THE GRADIENT */
+    /* 1. THE FOUNDATION */
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
         font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        /* Samsung Blue Gradient Fixed Background */
         background: linear-gradient(135deg, #000000 0%, #06083d 40%, #0036cc 100%) fixed;
         display: flex; 
         min-height: 100vh;
         margin: 0;
     }
 
-    /* 2. SIDEBAR (Fixed Left) */
+    /* 2. SIDEBAR */
     #sidebar {
         width: 280px;
         background: #000;
@@ -52,7 +51,7 @@
     nav a:hover { color: #00aaff; }
     nav a.active { background: #00aaff; border-radius: 5px; font-weight: bold; }
 
-    /* 3. MAIN CONTENT (Transparent to show Gradient) */
+    /* 3. MAIN CONTENT */
     #main-content {
         margin-left: 280px;
         padding: 60px;
@@ -69,7 +68,38 @@
         box-shadow: 0 20px 50px rgba(0,0,0,0.5);
     }
 
-    /* 5. WORKS STYLING FROM SCREENSHOT */
+    /* 5. CLOCK STYLING (Exercise 2.2c) */
+    #liveClock {
+        font-family: 'Courier New', monospace;
+        font-size: 14px;
+        font-weight: bold;
+        background: #000;
+        color: #00aaff;
+        padding: 10px 20px;
+        border-radius: 50px;
+        display: inline-block;
+        margin-bottom: 25px;
+        border: 1px solid #00aaff;
+        text-transform: uppercase;
+        box-shadow: 0 0 10px rgba(0, 170, 255, 0.3);
+    }
+
+    /* 6. ANIMATION LOGIC (Homework 3.3) */
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-item {
+        opacity: 0;
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+
+    /* 7. WORKS STYLING */
     .section-title {
         font-size: 32px;
         font-weight: 800;
@@ -164,9 +194,12 @@
 
   <main id="main-content">
     <div class="glass-card">
-        <h1 class="section-title">Selected Works</h1>
         
-        <div class="featured-black-card">
+        <div id="liveClock">Loading Time...</div>
+
+        <h1 class="section-title animate-item">Selected Works</h1>
+        
+        <div class="featured-black-card animate-item delay-1">
             <span class="featured-tag">Outstanding Research</span>
             <h2>Analyzing the Prenatal Experiences of Pregnant Women in Metro Manila During the COVID-19 Pandemic: First Trimester</h2>
             <p style="font-size: 13px; opacity: 0.8; margin-bottom: 20px;">
@@ -177,7 +210,7 @@
             </a>
         </div>
 
-        <div class="works-grid">
+        <div class="works-grid animate-item delay-2">
             <div class="work-box">
                 <span class="box-label">Brand Ambassadorship</span>
                 <h3>Samsung Galaxy Ambassador</h3>
@@ -202,6 +235,6 @@
     </div>
   </main>
 
-  <script src="js/main.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 3.2: Bouncing Ball</title>
+    <style>
+        body { margin: 0; overflow: hidden; background: #222; }
+        
+        #gameArea {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        #ball {
+            width: 50px;
+            height: 50px;
+            background: #00aaff;
+            border-radius: 50%;
+            position: absolute;
+            box-shadow: 0 0 20px #00aaff; /* Neon Glow */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="gameArea">
+        <div id="ball"></div>
+    </div>
+
+    <script>
+        let ball = document.getElementById("ball");
+        
+        // Initial Position
+        let x = 0;
+        let y = 0;
+        
+        // Speed (Velocity)
+        let dx = 5; // Horizontal speed
+        let dy = 5; // Vertical speed
+
+        setInterval(() => {
+            // 1. Update positions
+            x += dx;
+            y += dy;
+
+            // 2. Get window limits
+            let maxX = window.innerWidth - 50; // Subtract ball width
+            let maxY = window.innerHeight - 50; // Subtract ball height
+
+            // 3. Check for collisions (Bounce logic)
+            if (x >= maxX || x <= 0) {
+                dx = -dx; // Reverse horizontal direction
+                changeColor(); // Optional cool effect
+            }
+            if (y >= maxY || y <= 0) {
+                dy = -dy; // Reverse vertical direction
+                changeColor();
+            }
+
+            // 4. Apply new positions
+            ball.style.left = x + "px";
+            ball.style.top = y + "px";
+
+        }, 10); // Update every 10 milliseconds (Smooth animation)
+
+        function changeColor() {
+            // Randomly change color on bounce
+            const colors = ['#00aaff', '#ff0055', '#00ffaa', '#ffff00'];
+            ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+            ball.style.boxShadow = `0 0 20px ${ball.style.background}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 2: Dynamic Clock</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            margin: 0;
+        }
+
+        /* 2.1d: CSS for Creative Clock Design */
+        .clock-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 50px 80px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        #digitalClock {
+            font-size: 80px;
+            font-weight: 700;
+            letter-spacing: 5px;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+        }
+
+        #dateDisplay {
+            font-size: 24px;
+            margin-top: 10px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="clock-container">
+        <div id="digitalClock">00:00:00</div>
+        <div id="dateDisplay">Loading Date...</div>
+    </div>
+
+    <script>
+        // 2.1a & 2.1b: Check Time and Alert Greeting
+        window.onload = function() {
+            let now = new Date();
+            let hour = now.getHours();
+            let greeting = "";
+
+            if (hour < 12) {
+                greeting = "Good Morning!";
+            } else if (hour < 18) {
+                greeting = "Good Afternoon!";
+            } else if (hour < 20) {
+                greeting = "Good Evening!";
+            } else {
+                greeting = "Good Night!";
+            }
+            
+            // Dialog Box Requirement
+            alert(greeting + " Welcome to the Digital Clock Exercise.");
+        };
+
+        // 2.1c: Live Digital Clock
+        function updateClock() {
+            let now = new Date();
+            let timeString = now.toLocaleTimeString(); // Formats to HH:MM:SS AM/PM
+            let dateString = now.toDateString();       // Formats to Day Month Date Year
+
+            document.getElementById("digitalClock").innerHTML = timeString;
+            document.getElementById("dateDisplay").innerHTML = dateString;
+        }
+
+        setInterval(updateClock, 1000); // Update every 1 second
+        updateClock(); // Run immediately on load
+    </script>
+</body>
+</html>
